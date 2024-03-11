@@ -8,6 +8,7 @@ This is a repository template specialzied on Python development. It comes with:
 - MkDocs with mkdocstrings for documentation generation
 - GitHub Actions for PyPi publishing, Linting and Documentation
 - `pyproject.toml` pre-configured
+- Documentation will be automatically hosted on [GitHub Pages](https://lightdestory.github.io/PythonRepoTemplate)
 
 <hr>
 <!-- DELETE ME -->
