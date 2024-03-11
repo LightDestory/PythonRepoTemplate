@@ -1,3 +1,16 @@
+<!-- DELETE ME -->
+# About this template
+
+This is a repository template specialzied on Python development. It comes with:
+
+- Ruff for Linting & Formatting
+- Pytest for Unit testing
+- MkDocs with mkdocstrings for documentation generation
+- GitHub Actions for PyPi publishing, Linting and Documentation
+- `pyproject.toml` pre-configured
+
+<hr>
+<!-- DELETE ME -->
 <a name="readme-top"></a>
 
 <!-- Presentation Block -->
