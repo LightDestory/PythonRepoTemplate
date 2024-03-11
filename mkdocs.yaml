@@ -1,0 +1,24 @@
+# Project information
+site_name: Documentation Site
+site_url: https://lightdestory.github.io/PythonRepoTemplate
+site_author: LightDestory
+site_description: >-
+  Package Description
+
+# Repository
+repo_name: LightDestory/PythonRepoTemplate
+repo_url: https://github.com/LightDestory/PythonRepoTemplate
+
+# Theme
+theme:
+  name: material
+
+# Plugins
+plugins:
+  - search
+  - mkdocstrings
+
+
+# Nav
+nav:
+    - Home: index.md

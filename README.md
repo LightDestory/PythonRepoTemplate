@@ -5,8 +5,8 @@
 
 <div align="center">
 
-  <a href="https://github.com/LightDestory/RepositoryTemplate">
-    <img src="https://raw.githubusercontent.com/LightDestory/RepositoryTemplate/master/.github/assets/images/presentation_image.png" alt="Preview" width="90%">
+  <a href="https://github.com/LightDestory/PythonRepoTemplate">
+    <img src="https://raw.githubusercontent.com/LightDestory/PythonRepoTemplate/master/.github/assets/images/presentation_image.png" alt="Preview" width="90%">
   </a>
 
   <h2 align="center">PROJECT_NAME</h2>
@@ -17,19 +17,7 @@
   
   <br />
   <br />
-
-  <!-- MultiLang Selector - DELETE ME IF NOT NEEDED -->
-
-  <section>
-    This README is available in the following languages:
-    <br />
-    <a href="README.md">English</a>
-    ·
-    Italian
-    <br />
-    <br />
-  </section>
-
+  
 </div>
 
 <!-- ToC -->
@@ -74,13 +62,25 @@ START_INFO
 
 ### Prerequisites
 
-PREQ_INFO
+__Make sure to have Python 3.10+ installed on your system.__
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Installation
 
-INSTALL_INFO
+You can install as a Python Module using `pip`
+or executing, if applicable, the script directly.
+
+- If you want to install as a Python Module:
+    - Install the module using pip: `pip install PACKAGE_NAME`
+- If you want to use the script directly:
+    - Clone the repository anywhere on your pc:
+
+      `git clone https://github.com/LightDestory/PythonRepoTemplate`
+
+    - Install the requirements using `pip` (create a `venv` if you want):
+
+      `pip install . -e`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -115,7 +115,7 @@ If you find value in my work, please consider making a donation to help me creat
 Your donation will go a long way in helping me continue to create free software that can benefit people around the world.
 
 <p align="center">
-<a href='https://ko-fi.com/M4M6KC01A' target='_blank'><img src='https://raw.githubusercontent.com/LightDestory/RepositoryTemplate/master/.github/assets/images/support.png' alt='Buy Me a Hot Chocolate at ko-fi.com' width="45%" /></a>
+<a href='https://ko-fi.com/M4M6KC01A' target='_blank'><img src='https://raw.githubusercontent.com/LightDestory/PythonRepoTemplate/master/.github/assets/images/support.png' alt='Buy Me a Hot Chocolate at ko-fi.com' width="45%" /></a>
 </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -132,6 +132,8 @@ The content of this repository is distributed under the GNU GPL-3.0 License. See
 
 ## :hammer_and_wrench: Built With
 
-- [Capybara](https://it.wikipedia.org/wiki/Hydrochoerus_hydrochaeris)
+- [Python](https://www.python.org/)
+- [MkDocs](https://www.mkdocs.org/)
+- [mkdocstrings](https://mkdocstrings.github.io/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
