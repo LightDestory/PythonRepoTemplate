@@ -1,6 +1,8 @@
 name: Ruff
 
 on: [push, pull_request]
+  paths:
+    - src/**
 
 permissions:
   contents: read
