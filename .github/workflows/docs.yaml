@@ -1,33 +1,55 @@
-name: Docs Generation 
+name: Docs Generation
 
 on:
   push:
     branches:
-      - master 
+      - master
     paths:
-    - src/**
+      - "src/**"
+      - "docs/**"
+      - "mkdocs.yaml"
+      - ".github/workflows/docs.yaml"
+  workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: docs-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+
       - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-      - uses: actions/setup-python@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
         with:
-          python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
-      - uses: actions/cache@v4
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: Set cache identifier
+        run: echo "cache_id=$(date --utc '+%V')" >> "$GITHUB_ENV"
+
+      - name: Cache MkDocs Material
+        uses: actions/cache@v6
         with:
           key: mkdocs-material-${{ env.cache_id }}
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material mkdocs mkdocstrings[python]
-      - run: mkdocs gh-deploy --force
+
+      - name: Install documentation dependencies
+        run: python -m pip install --upgrade pip mkdocs-material mkdocs "mkdocstrings[python]"
+
+      - name: Deploy documentation
+        run: mkdocs gh-deploy --force
